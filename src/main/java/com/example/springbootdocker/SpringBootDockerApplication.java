@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringBootDockerApplication {
 
-	@RequestMapping("/")
+	@RequestMapping("/Sprint-Boot-Application")
 	public String home() {
-		return "Hello Docker World";
+		return "Hello welcome to Devon World";
 	}
 
 	public static void main(String[] args) {

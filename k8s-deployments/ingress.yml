@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1 
+kind: Ingress
+metadata:
+   name: aks-helloworld
+   annotation:
+       networking.gke.io/v1beta1.FrontendConfig: addon-http-application-routing      
+   spec:
+     rules:
+     - host: aks-helloworld.e63421f3957a4d99bc9d.eastus.aksapp. aks-helloworld
+       http:
+         paths:
+         - path: /*
+           pathType: Prefix
+           backend:
+             service:
+                name: aks-helloworld
+                port: 
+                 number: 8080
+                # - path: /        

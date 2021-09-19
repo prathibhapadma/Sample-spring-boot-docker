@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akscluster-a277"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akscluster-a277"
+  template:
+    metadata:
+      labels:
+        app: "akscluster-a277"
+    spec:
+      containers:
+        - name: "akscluster-a277"
+          image: "acrdockerimages101.azurecr.io/akscluster"
+          ports:
+          - containerPort: 80
